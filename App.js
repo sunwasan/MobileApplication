@@ -13,6 +13,7 @@ import Exercise9 from './screens/week02/Exercise9';
 import Exercise10 from './screens/week02/Exercise10';
 import Exercise11 from './screens/week02/Exercise11';
 import Exercise12 from './screens/week02/Exercise12';
+import Extra from './screens/week02/Extra';
 
 export default function App(){
   return(
@@ -27,7 +28,8 @@ export default function App(){
     // <Exercise9/>
     // <Exercise10/>
     // <Exercise11/>
-    <Exercise12/>
+    // <Exercise12/>
+    <Extra/>
 
   );
 }
