@@ -1,4 +1,7 @@
-Mobile Application Project
-Tools : 
-- Node.js
-- React Native Expo
+<h1>Mobile Application Project</h1>
+<h2><b>Tools : </b></h3>
+<ui>
+  <li>Node.js </li>
+  <li>React Native Expo</li>
+</ui>
+
