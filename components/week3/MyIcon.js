@@ -7,7 +7,7 @@ export default function MyIcon(props) {
     <View style={{ flex: 1, alignItems: "center" }}>
       <TouchableOpacity style={{ alignItems : "center" }} onPress={ props.onPress } >
         <FontAwesome name={props.name} size={props.size} color={props.color} />
-        <Text>{props.title}</Text>
+        <Text style={{fontSize:props.fontsize, color:props.fontcolor}}>{props.title}</Text>
       </TouchableOpacity>
     </View>
   );

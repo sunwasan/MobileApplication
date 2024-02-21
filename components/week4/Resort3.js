@@ -1,12 +1,12 @@
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import MyIcon from "./MyIcon";
+import { Icon, Divider } from "react-native-paper";
 
-export default function Section3() {
+export default function Resort3() {
   return (
     <View style={{ justifyContent: "center" }}>
-      <View style={{ flex: 1, flexDirection: "row", marginVertical:10 }}>
+      <View style={{ flex: 1, flexDirection: "row", marginVertical: 10 }}>
         <View
           style={{
             justifyContent: "center",
@@ -37,6 +37,7 @@ export default function Section3() {
           </View>
         </View>
       </View>
+      <Divider />
     </View>
   );
 }
