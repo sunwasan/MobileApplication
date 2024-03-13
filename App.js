@@ -30,13 +30,17 @@ import Resort from "./screens/week3/Resort";
 import { PaperProvider } from "react-native-paper";
 import TestPaper from "./screens/week4/TestPaper";
 import ResortPaper from "./screens/week4/ResortPaper";
+import Health from "./screens/week5/Health";
+import ChartKitScreen from "./screens/week5/ChartKit";
 export default function App() {
   return (
     // <Travel/>
     // <Resort/>
-    <PaperProvider>
-      <ResortPaper/>
-    </PaperProvider>
+    // <PaperProvider>
+    //   <ResortPaper/>
+    // </PaperProvider>
+    // <Health/>
+    <ChartKitScreen/>
   );
 }
 
