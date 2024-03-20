@@ -10,7 +10,7 @@ export default function Heartbeat() {
         setCount(new_cnt);
     }
   return (
-    <View style ={{flex:1, marginTop:200}}>
+    <View style ={{flex:1, marginTop:400}}>
       <View style={{ flexDirection: "row", padding:10, justifyContent:"space-around" }}>
         <TouchableOpacity onPress={onPressHeart}>
           <Icon source="heart" color="orange" size={60} />
