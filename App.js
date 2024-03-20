@@ -32,6 +32,8 @@ import TestPaper from "./screens/week4/TestPaper";
 import ResortPaper from "./screens/week4/ResortPaper";
 import Health from "./screens/week5/Health";
 import ChartKitScreen from "./screens/week5/ChartKit";
+import Home from "./screens/week6/Home";
+import FlatListExample from "./screens/week6/FlatListExample";
 export default function App() {
   return (
     // <Travel/>
@@ -40,7 +42,8 @@ export default function App() {
     //   <ResortPaper/>
     // </PaperProvider>
     // <Health/>
-    <ChartKitScreen/>
+    <Home/>
+    // <FlatListExample/>
   );
 }
 
