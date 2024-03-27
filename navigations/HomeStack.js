@@ -52,7 +52,7 @@ export default function HomeStack() {
         key={"Extra"}
         name={"Extra"}
         component={Extra}
-        options={{ title: "Extra" }}
+        options={{ title: "Extra" }}npm
       />
       <Stack.Screen
         key={"Resort_Home"}
