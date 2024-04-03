@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import BookStorage from "../../storages/BookStorage";
 
 export default function Book() {
   const navigation = useNavigation();
@@ -35,16 +36,27 @@ export default function Book() {
         "https://raw.githubusercontent.com/arc6828/myreactnative/master/assets/week9/book-4.jpg",
     },
   ]);
-  const [refresh, setRefresh] = useState(false);
 
-  const loadBooks = async () => {};
+  const loadBooks = async () => {
+    let books = await BookStorage.readItems();
+    setBooks(books);
+  };
   useEffect(() => {
-    loadBooks();
-  }, []);
+    // WHEN MOUNT AND UPDATE
+    const unsubscribe = navigation.addListener("focus", () => {
+      loadBooks();
+    });
+    // WHEN UNMOUNT
+    return unsubscribe;
+  }, [navigation]);
+
+  const [refresh, setRefresh] = useState(false);
 
   const BookItem = ({ item, index }) => (
     <TouchableOpacity
-      onPress={() => { navigation.navigate("BookDetail", { "id": item.id }); }}
+      onPress={() => {
+        navigation.navigate("BookDetail", { id: item.id });
+      }}
       style={{ backgroundColor: "white", margin: 7, flex: 1, elevation: 5 }}
     >
       <View style={{ flexDirection: "row" }}>
@@ -76,7 +88,9 @@ export default function Book() {
         renderItem={({ item, index }) => <BookItem item={item} />}
       />
       <TouchableOpacity
-        // onPress={() => { navigation.navigate("BookForm", { id: null }); }}
+        onPress={() => {
+          navigation.navigate("BookForm", { id: null });
+        }}
         style={{
           backgroundColor: "lightblue",
           flex: 1,
