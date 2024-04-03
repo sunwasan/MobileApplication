@@ -12,7 +12,7 @@ export default function Event(props) {
     );
     let data = await promise.json();
     setOnlineEvent(data);
-    console.log("Data is ", data);
+    // console.log("Data is ", data);
   };
   useEffect(() => {
     getData();

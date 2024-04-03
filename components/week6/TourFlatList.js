@@ -39,7 +39,7 @@ export default function TourFlatList(props) {
       );
       let data = await promise.json();
       setOnlineTours(data);
-      console.log("DATA :", data);
+      // console.log("DATA :", data);
     } catch (error) {
       console.log("ERROR :", error);
     }
