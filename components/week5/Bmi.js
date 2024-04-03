@@ -7,10 +7,10 @@ export default function Bmi() {
   const [bmi, setBmi] = useState("0");
   const [status, setStatus] = useState("NORMAL");
 
-  console.log("STATE : ", weight, height, bmi);
+  // console.log("STATE : ", weight, height, bmi);
 
   const onPressButton = () => {
-    console.log("Caculate BMI!");
+    // console.log("Caculate BMI!");
     let output = weight / (((height / 100) * height) / 100);
     setBmi(output.toFixed(2));
 

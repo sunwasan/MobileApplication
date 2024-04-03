@@ -15,7 +15,7 @@ export default function TodoList() {
         ]
     );
 
-    console.log("TODOS:", todos);
+    // console.log("TODOS:", todos);
 
     const onLoad = async () => {
         // READ ITEMS FROM STORAGE
@@ -49,7 +49,7 @@ export default function TodoList() {
         //Find index of specific object using findIndex method.   
         let index = t.findIndex((item => item.id == id));
         //Update object's name property.
-        console.log("t:", t[index],id);
+        // console.log("t:", t[index],id);
         t[index].title = new_title;
         //UPDATE STATE
         setTodos(t);
@@ -72,7 +72,7 @@ export default function TodoList() {
         let t = [...todos];
         let index = t.findIndex((item => item.id == id));
         [removed_t] = t.splice(index, 1);
-        console.log(removed_t);
+        // console.log(removed_t);
         setTodos(t);                
         
         // REMOVE AN ITEM FROM STORAGE - WRITE CODE HERE
